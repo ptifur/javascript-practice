@@ -80,7 +80,7 @@ function pressLetters(letters) {
 
             // console.log('there you go!')
 
-            caption.innerHTML = 'How to top this madness!'
+            caption.innerHTML = 'How to stop this madness!'
 
         }
 
