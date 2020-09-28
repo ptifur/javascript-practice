@@ -10,11 +10,17 @@ let gameStarted = false
 let letters = []
 
 // start the game
-button.addEventListener('click', () => startGame())
+// button.addEventListener('click', () => startGame())
 
 document.addEventListener('keydown', e => {
 
-    if (e.key === "Enter" && !gameStarted) startGame() 
+    if (e.key === "Enter" && !gameStarted) {
+
+        displayBoxes()
+
+        setTheUI()
+
+    } 
 
     if (gameStarted) {
 
@@ -24,14 +30,18 @@ document.addEventListener('keydown', e => {
 
 })
 
-function startGame() {
+function displayBoxes() {
 
     // generate new letters
     letters = newLetters(2)
 
     // display boxes
     createBoxes(letters, game)
-    
+
+}
+
+function setTheUI() {
+
     // set the state
     gameStarted = true
 
