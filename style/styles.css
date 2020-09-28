@@ -12,7 +12,7 @@
     justify-content: center; */
 }
 
-#game-window {
+#game {
     width: 65vw;
     height: 50vh;
     background: #eeeeee;
@@ -37,7 +37,7 @@
     text-align: center;
 }
 
-#button-start {
+#button {
     border: none;
     padding: 15px 15px;
     border-radius: 10px;
@@ -48,11 +48,11 @@
     color: #ffffff;
 }
 
-#button-start:hover {
+#button:hover {
     background: #c26161;
 }
 
-#button-start:disabled {
+#button:disabled {
     background: #dddddd;
 }
 
@@ -65,4 +65,15 @@
     font-size: 2.1em;
     border-radius: 13px;
     color: #3c3f44;
+}
+
+/* practice */
+#box {
+    width: 150px;
+    height: 150px;
+    background: #e47171;
+    display: grid;
+    place-items: center;
+    font-size: 2.3em;
+    color: #272c31;
 }

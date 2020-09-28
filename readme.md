@@ -16,3 +16,7 @@ Type them on your keyboard to practice typing
 Import other functions
 
 Style for the first letter
+
+Set the number of letters
+
+Create subdomain

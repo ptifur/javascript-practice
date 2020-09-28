@@ -1,8 +1,9 @@
 import { newLetters, createBoxes } from './utils.js'
+import { pressLetters } from './pressletters.js'
 
-const button = document.querySelector('#button-start')
+const button = document.querySelector('#button')
 const caption = document.querySelector('#caption')
-const gameWindow = document.querySelector('#game-window')
+const game = document.querySelector('#game')
 
 let gameStarted = false
 
@@ -15,7 +16,11 @@ document.addEventListener('keydown', e => {
 
     if (e.key === "Enter" && !gameStarted) startGame() 
 
-    if (gameStarted) pressLetters(e.key, letters)
+    if (gameStarted) {
+
+        gameStarted = pressLetters(e.key, letters, gameStarted)
+
+    } 
 
 })
 
@@ -25,7 +30,7 @@ function startGame() {
     letters = newLetters(2)
 
     // display boxes
-    createBoxes(letters, gameWindow)
+    createBoxes(letters, game)
     
     // set the state
     gameStarted = true
@@ -33,32 +38,5 @@ function startGame() {
     button.disabled = true
     
     caption.innerHTML = 'Press the first letter on the keyboard'
-
-}
-
-function pressLetters(key, letters) {
-
-    // remove the letter    
-    if (key === letters[0]) {
-
-        letters.shift()
-
-        const firstLetter = document.querySelector('.box:first-of-type')
-
-        gameWindow.removeChild(firstLetter)
-
-    }
-
-    // game over
-    if (letters.length === 0) {
-
-        // reset the state
-        gameStarted = false
-
-        button.disabled = false
-
-        caption.innerHTML = 'Well done!'
-
-    }
 
 }
