@@ -13,8 +13,10 @@ Type them on your keyboard to practice typing
 
 ### Todo
 
+~~Create subdomain~~
+
 Style for the first letter
 
 Set the number of letters
 
-Create subdomain
+Favicon
