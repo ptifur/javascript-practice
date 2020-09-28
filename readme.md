@@ -1,8 +1,8 @@
 ## JavaScript practice project
 
-Display random letters. 
+Display random letters
 
-Type them on your keyboard to practice typing.
+Type them on your keyboard to practice typing
 
 ## What I expect to learn in this project
 
@@ -13,8 +13,6 @@ Type them on your keyboard to practice typing.
 
 ### Todo
 
-Press the first letter
+How to restart the game
 
-Shift array 
-
-removeElement
+Async

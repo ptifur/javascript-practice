@@ -1,4 +1,4 @@
-import {  newLetters } from './utils.js'
+import { newLetters } from './utils.js'
 
 const button = document.querySelector('#button-start')
 const caption = document.querySelector('#caption')
@@ -24,7 +24,7 @@ function startGame() {
     if (!gameStarted) {
 
         // generate new letters
-        let letters = newLetters(6)
+        let letters = newLetters(2)
 
         caption.innerHTML = 'Press the first letter on the keyboard'
 
@@ -54,26 +54,36 @@ function createBoxes(l) {
 
 function pressLetters(letters) {
 
-    const firstLetter = document.querySelector('.box')
-
     document.addEventListener('keydown', e => {
 
         let key = e.key
 
         if (key === letters[0]) {
 
-            console.log('you pressed the first letter!')
+            const firstLetter = document.querySelector('.box:first-of-type')
 
-            // gameWindow.remove(firstLetter)
+            gameWindow.removeChild(firstLetter)
+
+            letters.shift()
+
+        }
+
+        if (letters.length === 0) {
+
+            gameStarted = false
+
+            button.disabled = false
+
+            document.removeEventListener('keydown', () => {
+                //
+            })
+
+            // console.log('there you go!')
+
+            caption.innerHTML = 'How to top this madness!'
 
         }
 
     })
-
-    // if key deleteElememnt
-
-    // shift array
-
-    // if array.length === 0 GAME OVER
 
 }
