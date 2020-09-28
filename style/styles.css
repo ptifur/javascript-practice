@@ -7,9 +7,33 @@
     width: 100vw;
     height: 100vh;
     background: #ffffff;
-    padding-top: 80px;
-    /* display: flex;
-    justify-content: center; */
+}
+
+.header {
+    display: flex;
+    /* background: #dfdfdf; */
+    align-items: center;
+    width: 65vw;
+    margin: auto;
+    justify-content: space-between;
+    padding: 30px 35px;
+}
+
+.title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    /* letter-spacing: .5px; */
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+}
+
+a {
+    font-size: .9em;
+    color: #868b8f;
 }
 
 #game {
@@ -27,7 +51,7 @@
 #caption {
     background: #fdfdfd;
     padding: 50px;
-    margin-top: 10px;
+    margin-top: 12px;
     display: grid;
     place-items: center;
     color: #868b8f;
