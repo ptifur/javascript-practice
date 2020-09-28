@@ -12,3 +12,17 @@ export function newLetters(length) {
     return randomLettersArray
 
 }
+
+export function createBoxes(letters, node) {
+
+    letters.forEach((letter, i) => {
+
+        const div = document.createElement('div')
+        div.classList.add('box')
+        div.innerHTML = letter
+    
+        node.appendChild(div)
+    
+    })
+
+}

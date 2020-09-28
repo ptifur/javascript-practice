@@ -13,6 +13,6 @@ Type them on your keyboard to practice typing
 
 ### Todo
 
-How to restart the game
+Import other functions
 
-Async
+Style for the first letter

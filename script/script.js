@@ -1,4 +1,4 @@
-import { newLetters } from './utils.js'
+import { newLetters, createBoxes } from './utils.js'
 
 const button = document.querySelector('#button-start')
 const caption = document.querySelector('#caption')
@@ -6,84 +6,59 @@ const gameWindow = document.querySelector('#game-window')
 
 let gameStarted = false
 
+let letters = []
+
 // start the game
 button.addEventListener('click', () => startGame())
 
 document.addEventListener('keydown', e => {
 
-    if (e.key === "Enter") {
-        startGame() 
-    }
+    if (e.key === "Enter" && !gameStarted) startGame() 
+
+    if (gameStarted) pressLetters(e.key, letters)
 
 })
 
 function startGame() {
 
+    // generate new letters
+    letters = newLetters(2)
+
+    // display boxes
+    createBoxes(letters, gameWindow)
+    
+    // set the state
+    gameStarted = true
+
     button.disabled = true
+    
+    caption.innerHTML = 'Press the first letter on the keyboard'
 
-    if (!gameStarted) {
+}
 
-        // generate new letters
-        let letters = newLetters(2)
+function pressLetters(key, letters) {
 
-        caption.innerHTML = 'Press the first letter on the keyboard'
+    // remove the letter    
+    if (key === letters[0]) {
 
-        createBoxes(letters)
+        letters.shift()
 
-        gameStarted = true
+        const firstLetter = document.querySelector('.box:first-of-type')
 
-        pressLetters(letters)
+        gameWindow.removeChild(firstLetter)
 
     }
 
-}
+    // game over
+    if (letters.length === 0) {
 
-function createBoxes(l) {
+        // reset the state
+        gameStarted = false
 
-    l.forEach((listItem, i) => {
+        button.disabled = false
 
-        const div = document.createElement('div')
-        div.classList.add('box')
-        div.innerHTML = listItem
-    
-        gameWindow.appendChild(div)
-    
-    })
+        caption.innerHTML = 'Well done!'
 
-}
-
-function pressLetters(letters) {
-
-    document.addEventListener('keydown', e => {
-
-        let key = e.key
-
-        if (key === letters[0]) {
-
-            const firstLetter = document.querySelector('.box:first-of-type')
-
-            gameWindow.removeChild(firstLetter)
-
-            letters.shift()
-
-        }
-
-        if (letters.length === 0) {
-
-            gameStarted = false
-
-            button.disabled = false
-
-            document.removeEventListener('keydown', () => {
-                //
-            })
-
-            // console.log('there you go!')
-
-            caption.innerHTML = 'How to stop this madness!'
-
-        }
-
-    })
+    }
 
 }
