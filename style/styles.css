@@ -29,11 +29,21 @@
     display: flex;
     gap: 20px;
     justify-content: right;
+    position: relative;
 }
 
 a {
     font-size: .9em;
     color: #868b8f;
+}
+
+.nav_settings {
+    font-size: .9em;
+    color: #868b8f;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #game {
@@ -83,7 +93,7 @@ a {
 .box {
     width: 100px;
     height: 100px;
-    border: 1px solid #868b8f;
+    border: 1px solid #dddddd;
     display: grid;
     place-items: center;
     font-size: 2.1em;
@@ -91,13 +101,51 @@ a {
     color: #3c3f44;
 }
 
-/* practice */
-#box {
-    width: 150px;
-    height: 150px;
-    background: #e47171;
-    display: grid;
-    place-items: center;
-    font-size: 2.3em;
+.box:nth-of-type(1) {
+    border: 1px solid #3c3f44;
+}
+
+.settings {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
     color: #272c31;
+    padding: 25px;
+    position: absolute;
+    top: 70px;
+    right: 19vw;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #dddddd;
+}
+
+.settings-numbers {
+    font-size: 2.6em;
+    /* border: #eeeeee solid 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+#minus, 
+#plus {
+    /* background: #eeeeee; */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.settings-text {
+    border: none;
+    padding: 15px 15px;
+    border-radius: 10px;
+    background: #e47171;
+    margin: auto;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.settings-text:hover {
+    background: #c26161;
 }

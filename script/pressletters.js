@@ -1,3 +1,6 @@
+let audioPress = new Audio('./media/press.wav')
+let audioGameOver = new Audio('./media/gameover.wav')
+
 export function pressLetters(key, letters, gameStarted) {
 
     // remove the letter    
@@ -8,6 +11,8 @@ export function pressLetters(key, letters, gameStarted) {
         const firstLetter = document.querySelector('.box:first-of-type')
 
         game.removeChild(firstLetter)
+
+        playSound(audioPress)
 
     }
 
@@ -21,8 +26,14 @@ export function pressLetters(key, letters, gameStarted) {
 
         caption.innerHTML = 'Well done!'
 
+        setTimeout(playSound, 500, audioGameOver)
+
     }    
 
     return gameStarted
 
+}
+
+function playSound(sound) {
+    sound.play()
 }

@@ -1,9 +1,9 @@
 import { newLetters, createBoxes } from './utils.js'
 
-export function displayBoxes(letters) {
+export function displayBoxes(letters, number) {
 
     // generate new letters
-    letters = newLetters(2)
+    letters = newLetters(number)
 
     // display boxes
     createBoxes(letters, game)
