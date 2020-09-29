@@ -19,3 +19,16 @@ Import **settings** as a module
 Update Button styles
 
 Inactive style for **– / +**
+
+
+### Next ideas
+
+Add spaces
+
+Add a Character with animation
+
+Sound for the wrong key
+
+The Chaser
+
+Score
