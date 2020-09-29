@@ -80,6 +80,7 @@ a {
     margin: auto;
     font-size: 1.1em;
     color: #ffffff;
+    cursor: pointer;
 }
 
 #button:hover {
@@ -103,6 +104,7 @@ a {
 
 .box:nth-of-type(1) {
     border: 1px solid #3c3f44;
+    position: relative;
 }
 
 #settings {
@@ -125,6 +127,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 35px;
+    user-select: none;
 }
 
 #minus, 
@@ -132,6 +135,7 @@ a {
     /* background: #eeeeee; */
     padding: 10px 20px;
     text-align: center;
+    cursor: pointer;
 }
 
 #settingstext {
@@ -144,8 +148,35 @@ a {
     color: #ffffff;
     text-align: center;
     margin-top: 10px;
+    user-select: none;
+    cursor: pointer;
 }
 
 #settingstext:hover {
     background: #c26161;
 }
+
+.box:nth-of-type(1)::before {
+    content: '🎮';
+    position: absolute;
+    top: 17px;
+    left: -95px;
+    font-size: 1.6em;
+    animation: roll 7500ms infinite;
+    /* transform: rotate(36deg); */
+}
+
+@keyframes roll {
+    50% {
+      transform: rotate(0);
+    }
+    65% {
+        transform: rotate(7deg);
+      }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }

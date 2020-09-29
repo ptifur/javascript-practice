@@ -10,6 +10,10 @@ Break main code into modules
   - Settings window
   - Sounds
 
+*1.1.2* 
+  - Cursor `pointer` style for settings
+  - `User select: none` for settings
+
 ### Todo
 
 Import **settings** as a module
@@ -25,7 +29,7 @@ Inactive style for **– / +**
 
 ~~Add spaces~~
 
-Add a Character with animation
+~~Add a Character with animation~~
 
 Sound for the wrong key
 
