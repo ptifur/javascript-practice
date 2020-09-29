@@ -37,7 +37,7 @@ a {
     color: #868b8f;
 }
 
-.nav_settings {
+#navsettings {
     font-size: .9em;
     color: #868b8f;
     display: flex;
@@ -105,7 +105,7 @@ a {
     border: 1px solid #3c3f44;
 }
 
-.settings {
+#settings {
     width: 250px;
     background-color: rgba(255, 255, 255, 0.5);
     display: none;
@@ -118,7 +118,7 @@ a {
     box-shadow: 10px 10px 20px #dddddd;
 }
 
-.settings-numbers {
+#settingsnumbers {
     font-size: 2.6em;
     /* border: #eeeeee solid 1px; */
     display: flex;
@@ -134,7 +134,7 @@ a {
     text-align: center;
 }
 
-.settings-text {
+#settingstext {
     border: none;
     padding: 15px 15px;
     border-radius: 10px;
@@ -146,6 +146,6 @@ a {
     margin-top: 10px;
 }
 
-.settings-text:hover {
+#settingstext:hover {
     background: #c26161;
 }

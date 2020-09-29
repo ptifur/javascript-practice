@@ -23,7 +23,7 @@ Inactive style for **– / +**
 
 ### Next ideas
 
-Add spaces
+~~Add spaces~~
 
 Add a Character with animation
 
@@ -32,3 +32,5 @@ Sound for the wrong key
 The Chaser
 
 Score
+
+Well done timeout

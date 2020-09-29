@@ -2,20 +2,20 @@ import { pressLetters } from './pressLetters.js'
 import { displayBoxes } from './displayBoxes.js'
 import { setTheUI } from './setTheUI.js'
 
+import { openSettings } from './openSettings.js'
+// import { updateSettings } from './updateSettings.js'
+
 const button = document.querySelector('#button')
 const caption = document.querySelector('#caption')
 const game = document.querySelector('#game')
 
 // settings DOM elements
-const navSettings = document.querySelector('.nav_settings')
-const settings = document.querySelector('.settings')
+const navsettings = document.querySelector('#navsettings')
+const settings = document.querySelector('#settings')
 
-const setPlus = document.querySelector('#plus')
-const setNumber = document.querySelector('#number')
-const setMinus = document.querySelector('#minus')
-
-let audioStart = new Audio('./media/start.wav')
-let audioSettings = new Audio('./media/settings.wav')
+const plus = document.querySelector('#plus')
+const setnum = document.querySelector('#number')
+const minus = document.querySelector('#minus')
 
 // initial setup
 let gameStarted = false
@@ -33,8 +33,6 @@ button.addEventListener('click', () => {
 
     settings.style.display = 'none'
 
-    // playSound(audioStart)
-
 })
 
 document.addEventListener('keydown', e => {
@@ -47,8 +45,6 @@ document.addEventListener('keydown', e => {
 
         settings.style.display = 'none'
 
-        // playSound(audioStart)
-
     } 
 
     if (gameStarted) {
@@ -59,48 +55,25 @@ document.addEventListener('keydown', e => {
 
 })
 
-settings.style.display = 'none'
+openSettings(setnum, NEW_LETTERS)
 
-// settings window
-navSettings.addEventListener('click', () => {
+// this does not work outside
+plus.addEventListener('click', () => {
 
-    if (settings.style.display == 'none') {
+    if ( NEW_LETTERS < 6 ) {
 
-        settings.style.display = 'block'
-
-    } else {
-
-        settings.style.display = 'none'
+        NEW_LETTERS++
 
     }
+
+    setnum.innerHTML = NEW_LETTERS
     
-})
+})   
 
-setNumber.innerHTML = NEW_LETTERS
-
-setPlus.addEventListener('click', () => {
-
-    if (NEW_LETTERS < 6) { NEW_LETTERS++ }
-    
-    setNumber.innerHTML = NEW_LETTERS
-
-})
-
-setMinus.addEventListener('click', () => {
+minus.addEventListener('click', () => {
 
     if (NEW_LETTERS > 1) { NEW_LETTERS-- }
 
-    setNumber.innerHTML = NEW_LETTERS
+    setnum.innerHTML = NEW_LETTERS
 
 })
-
-// settings button
-document.querySelector('.settings-text').addEventListener('click', () => {
-
-    settings.style.display = 'none'
-
-})
-
-function playSound(sound) {
-    sound.play()
-}
