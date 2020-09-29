@@ -31,8 +31,6 @@ button.addEventListener('click', () => {
 
     gameStarted = setTheUI(gameStarted)
 
-    settings.style.display = 'none'
-
 })
 
 document.addEventListener('keydown', e => {
@@ -42,8 +40,6 @@ document.addEventListener('keydown', e => {
         letters = displayBoxes(letters, NEW_LETTERS)
 
         gameStarted = setTheUI(gameStarted)
-
-        settings.style.display = 'none'
 
     } 
 
@@ -60,11 +56,7 @@ openSettings(setnum, NEW_LETTERS)
 // this does not work outside
 plus.addEventListener('click', () => {
 
-    if ( NEW_LETTERS < 6 ) {
-
-        NEW_LETTERS++
-
-    }
+    if (NEW_LETTERS < 6) { NEW_LETTERS++ }
 
     setnum.innerHTML = NEW_LETTERS
     
