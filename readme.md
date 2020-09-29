@@ -15,8 +15,8 @@ Type them on your keyboard to practice typing
 
 ~~Create subdomain~~
 
-Style for the first letter
+~~Style for the first letter~~
 
-Set the number of letters
+~~Set the number of letters~~
 
 Favicon
