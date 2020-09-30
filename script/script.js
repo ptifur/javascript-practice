@@ -3,7 +3,6 @@ import { displayBoxes } from './displayBoxes.js'
 import { setTheUI } from './setTheUI.js'
 
 import { openSettings } from './openSettings.js'
-// import { updateSettings } from './updateSettings.js'
 
 const button = document.querySelector('#button')
 const caption = document.querySelector('#caption')
@@ -51,6 +50,7 @@ document.addEventListener('keydown', e => {
 
 })
 
+// open settings window
 openSettings(setnum, NEW_LETTERS)
 
 // this does not work outside
