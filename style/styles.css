@@ -1,6 +1,11 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    color: #42474e;
+    font-family: 'IBM Plex Serif', serif;
+    letter-spacing: .5px;
+    line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 .wrapper {
@@ -11,45 +16,62 @@
 
 .header {
     display: flex;
-    /* background: #dfdfdf; */
     align-items: center;
-    width: 65vw;
+    width: 50vw;
     margin: auto;
     justify-content: space-between;
-    padding: 30px 35px;
+    padding: 35px 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
 }
 
 .title {
-    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2em;
     font-weight: 500;
-    /* letter-spacing: .5px; */
+}
+
+.inline {
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: 8px;
 }
 
 .nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: right;
     position: relative;
 }
 
 a {
+    text-decoration: none;
     font-size: .9em;
-    color: #868b8f;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #eb5252;
 }
 
 #navsettings {
     font-size: .9em;
-    color: #868b8f;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    text-decoration: underline;
     cursor: pointer;
 }
 
+#navsettings:hover {
+    color: #eb5252;
+}
+
 #game {
-    width: 65vw;
+    width: 55vw;
     height: 50vh;
-    background: #eeeeee;
+    background: #f5f5f5;
     border-radius: 20px;
     margin: auto;
     display: flex;
@@ -59,12 +81,13 @@ a {
 }
 
 #caption {
+    font-size: 1rem;
     background: #fdfdfd;
     padding: 50px;
     margin-top: 12px;
     display: grid;
     place-items: center;
-    color: #868b8f;
+    color: #9ea1a5;
 }
 
 .bottom {
@@ -97,7 +120,7 @@ a {
     border: 1px solid #dddddd;
     display: grid;
     place-items: center;
-    font-size: 2.1em;
+    font-size: 2.1rem;
     border-radius: 13px;
     color: #3c3f44;
 }
@@ -108,34 +131,36 @@ a {
 }
 
 #settings {
-    width: 250px;
+    width: 260px;
     background-color: rgba(255, 255, 255, 0.5);
     display: none;
     color: #272c31;
     padding: 25px;
     position: absolute;
-    top: 70px;
-    right: 19vw;
+    top: 85px;
+    right: 25vw;
     border-radius: 15px;
     box-shadow: 10px 10px 20px #dddddd;
 }
 
 #settingsnumbers {
-    font-size: 2.6em;
-    /* border: #eeeeee solid 1px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 26px;
     user-select: none;
 }
 
 #minus, 
 #plus {
-    /* background: #eeeeee; */
-    padding: 10px 20px;
+    font-size: 2.6rem;
+    padding: 10px 10px;
     text-align: center;
     cursor: pointer;
+}
+
+#number {
+    font-size: 2.5rem;
 }
 
 #settingstext {
@@ -144,7 +169,7 @@ a {
     border-radius: 10px;
     background: #e47171;
     margin: auto;
-    font-size: 1.1em;
+    font-size: .9rem;
     color: #ffffff;
     text-align: center;
     margin-top: 10px;
@@ -159,11 +184,9 @@ a {
 .box:nth-of-type(1)::before {
     content: '🎮';
     position: absolute;
-    top: 17px;
     left: -95px;
     font-size: 1.6em;
     animation: roll 7500ms infinite;
-    /* transform: rotate(36deg); */
 }
 
 @keyframes roll {
