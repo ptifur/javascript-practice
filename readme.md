@@ -1,17 +1,15 @@
-## JavaScript practice project | Modules branch
+## JavaScript practice project
 
 Display random letters
 
 Type them on your keyboard to practice typing
 
-### What I expect to learn in this project
+## What I expect to learn in this project
 
   - Working with arrays
   - Mouse and keyboard input
   - Importing modules
   - Scope/passing the values
-
-----
 
 *v1.0.0* First prototype
 
@@ -25,13 +23,11 @@ Type them on your keyboard to practice typing
   - Cursor `pointer` style for settings
   - `User select: none` for settings
 
-### Todo
+## Todo
 
 Import **settings** as a module
 
 **Sound off** setting
-
-Update Button styles
 
 Inactive style for **– / +**
 
@@ -41,8 +37,6 @@ Inactive style for **– / +**
 ~~Add spaces~~
 
 ~~Add a Character with animation~~
-
-Sound for the wrong key
 
 The Chaser
 
