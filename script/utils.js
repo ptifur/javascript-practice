@@ -1,6 +1,6 @@
 export function newLetters(length) {
 
-    let randomChars = 'abcdefghijklmnopqrstuvwxyz'
+    let randomChars = 'abcdefghijklmnopqrstuvwxyz      '
     let randomLetters = ''
     
     for ( let i = 0; i < length; i++ ) {

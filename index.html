@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175973007-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-175973007-2');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Type type</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;700&display=swap" rel="stylesheet"> 
+    <title>PtiType</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/styles.css">
     <script src="./script/script.js" type="module" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
+            <div class="container">
             <div class="title">PtiType</div>
+            <div><span class="inline">by</span> <a href="https://ptifur.digital">Ptifur</a></div>
+            </div>
             <div class="nav">
-                <div><a >settings</a></div>
-                <div><a href="https://github.com/ptifur/javascript-practice" target="_blank">source code</a></div>
+                <div id="navsettings">settings</div>
+                <div><a href="https://github.com/ptifur/javascript-practice/tree/modules" target="_blank">source code</a></div>
             </div>
         </div>
         
@@ -23,6 +36,15 @@
         <div class="bottom">
             <button id="button">Start the game</button>
         </div>
+    </div>
+
+    <div id="settings">
+        <div id="settingsnumbers">
+            <div id="minus">–</div>
+            <div id="number"></div>
+            <div id="plus">+</div>
+        </div>
+        <div id="settingstext">Set number of letters</div>
     </div>
     
 </body>
