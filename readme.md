@@ -15,11 +15,10 @@ Type them on your keyboard to practice typing
 
 *v1.1.0* Break into modules
 
-<<<<<<< HEAD
 ~~Style for the first letter~~
 
 ~~Set the number of letters~~
-=======
+
 *v1.1.1* 
   - Settings window
   - Sounds
@@ -27,7 +26,6 @@ Type them on your keyboard to practice typing
 *1.1.2* 
   - Cursor `pointer` style for settings
   - `User select: none` for settings
->>>>>>> modules
 
 ## Todo
 
