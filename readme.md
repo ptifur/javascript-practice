@@ -1,4 +1,4 @@
-### JavaScript practice project
+# JavaScript practice project
 
 Display random letters
 
