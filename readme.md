@@ -13,17 +13,8 @@ Type them on your keyboard to practice typing
 
 *v1.0.0* First prototype
 
-*v1.1.0* Break into modules
+*v1.1.0* Break the app into modules
 
-~~Style for the first letter~~
-
-~~Set the number of letters~~
-
-*v1.1.1* 
-  - Settings window
-  - Sounds
-
-*1.1.2* 
   - Cursor `pointer` style for settings
   - `User select: none` for settings
 
@@ -35,12 +26,7 @@ Import **settings** as a module
 
 Inactive style for **– / +**
 
-
 ### Next ideas
-
-~~Add spaces~~
-
-~~Add a Character with animation~~
 
 The Chaser
 
