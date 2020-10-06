@@ -1,9 +1,12 @@
-let audioPress = new Audio('./media/press.wav')
-let audioGameOver = new Audio('./media/gameover.wav')
 
-export function pressLetters(key, letters, gameStarted) {
+const audio = {
+    press: new Audio('./media/press.wav'),
+    gameOver: new Audio('./media/gameover.wav')
+}
 
-    // remove the letter    
+export function pressLetters(key, letters, hasGameStarted) {
+
+    // remove the letter
     if (key === letters[0]) {
 
         letters.shift()
@@ -12,7 +15,7 @@ export function pressLetters(key, letters, gameStarted) {
 
         game.removeChild(firstLetter)
 
-        playSound(audioPress)
+        playSound(audio.press)
 
     }
 
@@ -20,17 +23,17 @@ export function pressLetters(key, letters, gameStarted) {
    if (letters.length === 0) {
 
         // reset the state
-        gameStarted = false
+        hasGameStarted = false
 
         button.disabled = false
 
         caption.innerHTML = 'Well done!'
 
-        setTimeout(playSound, 500, audioGameOver)
+        setTimeout(playSound(audio.gameOver), 500)
 
-    }    
+    }
 
-    return gameStarted
+    return hasGameStarted
 
 }
 

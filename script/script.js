@@ -1,6 +1,6 @@
 import { pressLetters } from './pressLetters.js'
 import { displayBoxes } from './displayBoxes.js'
-import { setTheUI } from './setTheUI.js'
+import { initGame } from './initGame.js'
 
 import { openSettings } from './openSettings.js'
 
@@ -12,12 +12,14 @@ const game = document.querySelector('#game')
 const navsettings = document.querySelector('#navsettings')
 const settings = document.querySelector('#settings')
 
-const plus = document.querySelector('#plus')
 const setnum = document.querySelector('#number')
+
+// Addition/Subtraction
+const plus = document.querySelector('#plus')
 const minus = document.querySelector('#minus')
 
 // initial setup
-let gameStarted = false
+let hasGameStarted = false
 
 let letters = []
 
@@ -28,25 +30,25 @@ button.addEventListener('click', () => {
 
     letters = displayBoxes(letters, NEW_LETTERS)
 
-    gameStarted = setTheUI(gameStarted)
+    hasGameStarted = initGame()
 
 })
 
-document.addEventListener('keydown', e => {
+document.addEventListener('keydown', event => {
 
-    if (e.key === "Enter" && !gameStarted) {
+    if (event.key === "Enter" && !hasGameStarted) {
 
         letters = displayBoxes(letters, NEW_LETTERS)
 
-        gameStarted = setTheUI(gameStarted)
+        hasGameStarted = initGame()
 
-    } 
+    }
 
-    if (gameStarted) {
+    if (hasGameStarted) {
 
-        gameStarted = pressLetters(e.key, letters, gameStarted)
+        hasGameStarted = pressLetters(event.key, letters, hasGameStarted)
 
-    } 
+    }
 
 })
 
@@ -59,8 +61,8 @@ plus.addEventListener('click', () => {
     if (NEW_LETTERS < 6) { NEW_LETTERS++ }
 
     setnum.innerHTML = NEW_LETTERS
-    
-})   
+
+})
 
 minus.addEventListener('click', () => {
 
