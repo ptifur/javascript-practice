@@ -48,3 +48,16 @@ function playSound(sound) {
     sound.play()
 
 }
+
+// This file could also be named more generic, something like userInput.js
+
+/* I feel like you could reduce some of your .js files. For example the file setTheUI.js doesn't import anything 
+or does anything fancy that it needs to be its own module. I'm sure you can find a different spot for it and get rid of the file entirely :)
+
+Same goes for the function createBoxes in util.js. createBoxes is just a function in util but displayBoxes gets its own .js file? 
+It's not all bad but just heavily inconsistent 
+*/
+
+/* Also, how about a mode/settings where you can choose to use real world words too? The source for the words could be a list 
+of the 1000 most used words in the english language (I'm sure there are a ton of lists online available).
+*/

@@ -58,7 +58,7 @@ openSettings(setnum, newLetters)
 
 plus.addEventListener('click', () => {
 
-    if (newLetters < 6) { newLetters++ }
+    if (newLetters < 6) newLetters++
 
     setnum.innerHTML = newLetters
 
@@ -66,8 +66,17 @@ plus.addEventListener('click', () => {
 
 minus.addEventListener('click', () => {
 
-    if (newLetters > 1) { newLetters-- }
+    if (newLetters > 1) newLetters--
 
     setnum.innerHTML = newLetters
 
 })
+
+// export function setNewLetters(newValue) {
+//     if (!newValue) return;
+//     newLetters = newValue;
+//   }
+
+// sets the value for you
+// So you can then call this function in your event listeners and update your variable this way. 
+// Skips passing values back and forth, back and forth.
