@@ -20,3 +20,5 @@ export function openSettings(setnum, NEW_LETTERS) {
     })
 
 }
+
+// ternary operator

@@ -10,3 +10,9 @@ Type them on your keyboard to practice typing
 - Mouse and keyboard input
 - Importing modules
 - Scope/passing the values
+
+## Version 1
+
+Moved pull request suggestions as the comments into the code
+
+Gonna need some time to digest

@@ -1,8 +1,12 @@
-
 const audio = {
+
     press: new Audio('./media/press.wav'),
+
     gameOver: new Audio('./media/gameover.wav')
+
 }
+
+// You can also use a map to store similar objects
 
 export function pressLetters(key, letters, hasGameStarted) {
 
@@ -37,6 +41,10 @@ export function pressLetters(key, letters, hasGameStarted) {
 
 }
 
+// boolean are easy to read when prefixed with is, has, can, should
+
 function playSound(sound) {
+
     sound.play()
+
 }

@@ -9,3 +9,5 @@ export function initGame() {
     return true
 
 }
+
+// Just need to return true

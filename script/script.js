@@ -1,8 +1,9 @@
 import { pressLetters } from './pressLetters.js'
 import { displayBoxes } from './displayBoxes.js'
+import { openSettings } from './openSettings.js'
 import { initGame } from './initGame.js'
 
-import { openSettings } from './openSettings.js'
+// init or load would be better here
 
 const button = document.querySelector('#button')
 const caption = document.querySelector('#caption')
@@ -13,22 +14,22 @@ const navsettings = document.querySelector('#navsettings')
 const settings = document.querySelector('#settings')
 
 const setnum = document.querySelector('#number')
-
-// Addition/Subtraction
 const plus = document.querySelector('#plus')
 const minus = document.querySelector('#minus')
+
+// All of these document.querySelector names can be improved
 
 // initial setup
 let hasGameStarted = false
 
 let letters = []
 
-let NEW_LETTERS = 3
+let newLetters = 3
 
 // start the game
 button.addEventListener('click', () => {
 
-    letters = displayBoxes(letters, NEW_LETTERS)
+    letters = displayBoxes(letters, newLetters)
 
     hasGameStarted = initGame()
 
@@ -38,7 +39,7 @@ document.addEventListener('keydown', event => {
 
     if (event.key === "Enter" && !hasGameStarted) {
 
-        letters = displayBoxes(letters, NEW_LETTERS)
+        letters = displayBoxes(letters, newLetters)
 
         hasGameStarted = initGame()
 
@@ -53,21 +54,20 @@ document.addEventListener('keydown', event => {
 })
 
 // open settings window
-openSettings(setnum, NEW_LETTERS)
+openSettings(setnum, newLetters)
 
-// this does not work outside
 plus.addEventListener('click', () => {
 
-    if (NEW_LETTERS < 6) { NEW_LETTERS++ }
+    if (newLetters < 6) { newLetters++ }
 
-    setnum.innerHTML = NEW_LETTERS
+    setnum.innerHTML = newLetters
 
 })
 
 minus.addEventListener('click', () => {
 
-    if (NEW_LETTERS > 1) { NEW_LETTERS-- }
+    if (newLetters > 1) { newLetters-- }
 
-    setnum.innerHTML = NEW_LETTERS
+    setnum.innerHTML = newLetters
 
 })

@@ -1,7 +1,6 @@
-
 const randomChars = 'abcdefghijklmnopqrstuvwxyz      '
 
-export function random (num) {
+export function random(num) {
 
     return Math.floor(Math.random() * num)
 
@@ -32,3 +31,10 @@ export function createBoxes(letters, node) {
     })
 
 }
+
+// let randomChars = 'abcdefghijklmnopqrstuvwxyz      '
+// let randomLetters = ''
+
+// let randomLetters = []
+
+// you can just push into an array instead of building a string and then splitting it
