@@ -6,23 +6,17 @@ export function openSettings(setnum, NEW_LETTERS) {
 
     // settings window
     navsettings.addEventListener('click', () => {
-        
-        if (settings.style.display == 'none') {
 
-            settings.style.display = 'block'
+        settings.style.display = (settings.style.display == 'none')
+            ? 'block'
+            : 'none'
 
-        } else {
-
-            settings.style.display = 'none'
-
-        }
-        
     })
 
     document.querySelector('#settingstext').addEventListener('click', () => {
 
         settings.style.display = 'none'
-    
+
     })
 
 }
