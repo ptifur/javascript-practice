@@ -3,7 +3,7 @@
 		document.body.innerHTML += '\
 		<div class="cookieconsent">\
 			This site uses cookies. By continuing to use this website, you agree to their use. \
-			<a href="#">I Understand</a>\
+			<a href="#">I understand</a>\
 		</div>\
 		';
 		document.querySelector('.cookieconsent a').onclick = function(e) {
