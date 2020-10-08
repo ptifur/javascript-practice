@@ -189,6 +189,30 @@ a:hover {
     animation: roll 7500ms infinite;
 }
 
+.cookieconsent {
+    position: fixed;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    background-color:#dddddd;
+    font-size: .8em;
+    /* font-weight: 500; */
+    color:#272c31;
+    text-align: center;
+    width: 100%;
+    z-index: 99999;"
+}
+
+.cookieconsent a {
+    font-size: 1em;
+    font-weight: 600;
+    color: #e47171;
+}
+
+.cookieconsent a:hover {
+    color: #c26161;
+}
+
 @keyframes roll {
     50% {
       transform: rotate(0);
