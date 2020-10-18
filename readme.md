@@ -11,7 +11,7 @@ Type them on your keyboard to practice typing
 - Importing modules
 - Scope/passing the values
 
-## Version 1
+## Version 1.0
 
 Moved pull request suggestions as the comments into the code
 
